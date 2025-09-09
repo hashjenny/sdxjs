@@ -1,5 +1,5 @@
 import { glob } from "glob";
-import hope from "./Hope";
+import hope from "./Hope.ts"; // must add postfix '.ts' while using 'node main.ts'
 
 export const main = async (args: string[]) => {
   let files: string[] = [];
@@ -11,8 +11,11 @@ export const main = async (args: string[]) => {
   }
 
   for (const file of files) {
-    await import(file);
+    // import(./test-*.ts)
+    await import(file.replace("ch4", "."));
   }
 
-  hope.run();
+  hope.run("verse");
 };
+
+// await main(process.argv);
