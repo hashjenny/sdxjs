@@ -1,3 +1,5 @@
-import { main } from "./ch5/run.ts";
+import { main, hashExisting } from "./ch5/run.ts";
 
-await main(process.argv);
+for (const ele of await hashExisting('./ch4')) {
+    console.log(ele);
+}
