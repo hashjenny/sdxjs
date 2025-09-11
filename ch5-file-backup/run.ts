@@ -19,7 +19,7 @@ export const main = async (args: string[]) => {
 }
 
 export const hashExisting = async (dir: string) => {
-    const hashSet = new Set<HashPair>()
+    const hashMap = new Map<string, string>()
     const files = await fsp.readdir(dir)
     for (const file of files) {
         const path = `${dir}/${file}`
@@ -29,12 +29,12 @@ export const hashExisting = async (dir: string) => {
             const hash = crypto.createHash("sha1").setEncoding("hex")
             hash.write(content)
             hash.end()
-            hashSet.add({ path, hash: hash.read() })
+            hashMap.set(path, hash.read())
         }
     }
-    return hashSet
+    return hashMap
 }
 
-const findNew = async (dir: string, hashSet: Set<HashPair>) => {
-
+export const findNew = async (dir: string, hashMap: Map<string, string>) => {
+    const
 }
