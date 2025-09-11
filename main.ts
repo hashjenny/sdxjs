@@ -1,3 +1,3 @@
-import { main } from "./ch4/run.ts";
+import { main } from "./ch5/run.ts";
 
 await main(process.argv);
