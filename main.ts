@@ -1,5 +1,5 @@
-import { main, hashExisting } from "./ch5-file-backup/run.ts";
+import { main } from "./ch5-file-backup/ex-2.ts";
+import backup from './ch5-file-backup/Backup.ts'
 
-for (const ele of await hashExisting('./ch4')) {
-    console.log(ele);
-}
+// main()
+await backup.migrateCsvToJson('2025-9-13.csv')
