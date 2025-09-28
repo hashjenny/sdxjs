@@ -1,5 +1,4 @@
-// @ts-ignore
-import { RowTable, ColTable, time, memory, calculateRatio } from './Table.ts'
+import { RowTable, ColTable, time, memory, calculateRatio } from './Table.js'
 import * as assert from 'node:assert'
 
 const RANGE = 9
@@ -9,7 +8,6 @@ export const main = () => {
     const nCols = 3 //parseInt(process.argv[3])
     const filterPerSelect = 3 //parseFloat(process.argv[4])
 
-    // @ts-ignore
     const labels = [...Array(nCols).keys()].map(i => `label_${i + 1}`)
     const someLabels = labels.slice(0, Math.floor(labels.length / 2))
     assert.ok(someLabels.length > 0,
