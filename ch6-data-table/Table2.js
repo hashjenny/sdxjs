@@ -17,7 +17,6 @@ class RowTable {
         return this.table.filter(row => func(row))
     }
 
-
     select(selectLabels) {
         return this.table.map(row => {
             const newRow= {}

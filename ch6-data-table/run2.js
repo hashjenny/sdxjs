@@ -1,4 +1,4 @@
-import { RowTable, ColTable, time, memory, calculateRatio } from './Table.js'
+import { RowTable, ColTable, time, memory, calculateRatio } from './Table2.js'
 import * as assert from 'node:assert'
 
 const RANGE = 9
